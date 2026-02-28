@@ -1,11 +1,11 @@
 const events = [
-  { icon: "🎂", name: "Birthday Parties", price: "$299–$599" },
-  { icon: "🏫", name: "School STEM Nights", price: "$500–$1,200" },
-  { icon: "📚", name: "Library Programs", price: "$200–$500" },
-  { icon: "🛒", name: "Farmers Markets", price: "$5–$25/print" },
-  { icon: "🏢", name: "Corporate Family Days", price: "$800–$2,000" },
-  { icon: "☀️", name: "Summer Camps", price: "$150–$300/session" },
-  { icon: "📖", name: "After-School Programs", price: "$400–$800/series" },
+  { icon: "🎂", name: "Birthday Parties" },
+  { icon: "🏫", name: "School STEM Nights" },
+  { icon: "📚", name: "Library Programs" },
+  { icon: "🛒", name: "Farmers Markets" },
+  { icon: "🏢", name: "Corporate Family Days" },
+  { icon: "☀️", name: "Summer Camps" },
+  { icon: "📖", name: "After-School Programs" },
 ];
 
 export default function Events() {
@@ -26,20 +26,31 @@ export default function Events() {
         {/* Events grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4 animate-on-scroll">
           {events.map((event) => (
-            <div
+            <a
               key={event.name}
+              href="#contact"
               className="group rounded-2xl bg-white p-5 text-center shadow-sm hover:shadow-lg border border-gray-200/50 hover:border-violet/20 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="text-3xl mb-3 transition-transform duration-300 group-hover:scale-110">
                 {event.icon}
               </div>
-              <h3 className="text-sm font-semibold text-navy mb-2 leading-snug">
+              <h3 className="text-sm font-semibold text-navy leading-snug">
                 {event.name}
               </h3>
-              <p className="text-sm font-bold text-violet">{event.price}</p>
-            </div>
+            </a>
           ))}
         </div>
+
+        {/* Inquiry prompt */}
+        <p className="text-center text-sm text-gray-500 mt-8 animate-on-scroll">
+          <a
+            href="#contact"
+            className="text-violet font-medium hover:underline"
+          >
+            Contact us
+          </a>{" "}
+          for event pricing and availability.
+        </p>
       </div>
     </section>
   );
