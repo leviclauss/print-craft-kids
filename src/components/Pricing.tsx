@@ -1,7 +1,6 @@
 const plans = [
   {
     name: "Starter",
-    price: "$299",
     description: "Up to 8 kids, 1 hour, 1 printer, name tags & keychains",
     features: [
       "Up to 8 kids",
@@ -13,7 +12,6 @@ const plans = [
   },
   {
     name: "Popular",
-    price: "$449",
     description:
       "Up to 15 kids, 1.5 hours, 2 printers, voice-to-print + activities",
     features: [
@@ -26,7 +24,6 @@ const plans = [
   },
   {
     name: "Premium",
-    price: "$599",
     description:
       "Up to 20 kids, 2 hours, 3 printers, full activity menu + photo figurines",
     features: [
@@ -46,8 +43,12 @@ export default function Pricing() {
         {/* Heading */}
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy tracking-tight mb-4">
-            Simple, Transparent Pricing
+            Packages
           </h2>
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+            Choose a package that fits your event — reach out for a custom
+            quote.
+          </p>
         </div>
 
         {/* Pricing cards */}
@@ -74,13 +75,6 @@ export default function Pricing() {
               <h3 className="text-lg font-semibold text-gray-500 mb-2">
                 {plan.name}
               </h3>
-
-              {/* Price */}
-              <div className="mb-6">
-                <span className="text-4xl font-bold text-navy">
-                  {plan.price}
-                </span>
-              </div>
 
               {/* Features */}
               <ul className="space-y-3 mb-8">
@@ -114,7 +108,7 @@ export default function Pricing() {
                     : "bg-navy text-white hover:bg-navy-light"
                 }`}
               >
-                Book Now
+                Get a Quote
               </a>
             </div>
           ))}
