@@ -1,11 +1,24 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-navy">
+      {/* Background hero image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-kids-workshop.jpg"
+          alt="Kids at a PrintCraft Kids 3D printing workshop event"
+          fill
+          className="object-cover opacity-40"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/60 via-navy/40 to-navy/80" />
+      </div>
+
       {/* Background gradient blobs */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-violet/30 rounded-full blur-3xl animate-pulse-soft" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo/20 rounded-full blur-3xl animate-pulse-soft [animation-delay:1.5s]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-violet/20 rounded-full blur-3xl animate-pulse-soft" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo/15 rounded-full blur-3xl animate-pulse-soft [animation-delay:1.5s]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 text-center pt-20 pb-16">
@@ -46,8 +59,18 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Floating 3D icon */}
-        <div className="text-6xl sm:text-7xl animate-float mb-10">🧊</div>
+        {/* Photo showcase */}
+        <div className="relative mx-auto max-w-3xl rounded-2xl overflow-hidden shadow-2xl shadow-violet/20 mb-10 border border-white/10">
+          <Image
+            src="/images/indoor-workshop.jpg"
+            alt="Kids gathered around a PrintCraft Kids 3D printing station at an indoor event"
+            width={1200}
+            height={800}
+            className="w-full h-auto"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
+        </div>
 
         {/* Trust bar */}
         <div className="text-sm text-gray-500">

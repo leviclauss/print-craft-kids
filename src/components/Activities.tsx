@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const activities = [
   {
     icon: "🐉",
@@ -63,6 +65,24 @@ export default function Activities() {
             A full menu of hands-on STEM experiences — mix and match for any
             event.
           </p>
+        </div>
+
+        {/* Featured photo */}
+        <div className="animate-on-scroll mb-12">
+          <div className="relative mx-auto max-w-5xl rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/images/outdoor-event.jpg"
+              alt="Excited kid holding a 3D printed creation at a PrintCraft Kids outdoor event"
+              width={1200}
+              height={800}
+              className="w-full h-72 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-violet/30 to-transparent" />
+            <div className="absolute bottom-6 left-6 text-white">
+              <p className="text-xl font-bold">Hands-on STEM Fun</p>
+              <p className="text-sm text-gray-200">Every creation is unique</p>
+            </div>
+          </div>
         </div>
 
         {/* Activity grid */}
