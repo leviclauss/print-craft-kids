@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const steps = [
   {
     icon: "🎤",
@@ -31,6 +33,20 @@ export default function HowItWorks() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy tracking-tight mb-4">
             Magic in 3 Steps
           </h2>
+        </div>
+
+        {/* Featured image */}
+        <div className="animate-on-scroll mb-16">
+          <div className="relative mx-auto max-w-4xl rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/child-designing.jpg"
+              alt="A child designing a 3D creation on a tablet with 3D printed objects on the desk"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent" />
+          </div>
         </div>
 
         {/* Steps */}

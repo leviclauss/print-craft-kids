@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const events = [
   { icon: "🎂", name: "Birthday Parties" },
   { icon: "🏫", name: "School STEM Nights" },
@@ -21,6 +23,38 @@ export default function Events() {
             From backyard birthday parties to corporate campus events — we bring
             the magic.
           </p>
+        </div>
+
+        {/* Event photo showcase */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16 animate-on-scroll">
+          <div className="relative rounded-2xl overflow-hidden shadow-lg group">
+            <Image
+              src="/images/indoor-workshop.jpg"
+              alt="Kids at an indoor PrintCraft Kids 3D printing workshop"
+              width={1200}
+              height={800}
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+            <div className="absolute bottom-4 left-4 text-white">
+              <p className="text-sm font-semibold">Indoor Events</p>
+              <p className="text-xs text-gray-300">Schools, parties & workshops</p>
+            </div>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-lg group">
+            <Image
+              src="/images/outdoor-event.jpg"
+              alt="PrintCraft Kids mobile 3D printing cart at an outdoor event"
+              width={1200}
+              height={800}
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+            <div className="absolute bottom-4 left-4 text-white">
+              <p className="text-sm font-semibold">Outdoor Events</p>
+              <p className="text-xs text-gray-300">Markets, fairs & festivals</p>
+            </div>
+          </div>
         </div>
 
         {/* Events grid */}
